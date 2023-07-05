@@ -7,13 +7,22 @@ package week03;
 
 public class Car {
     // <필드 영역>
+
+    // 1) 고유 데이터 영역
     String company;     // 자동차 회사
     String model;       // 자동차 모델
     String color;       // 자동차 색
     double price;       // 자동차 가격
+
+    // 2) 상태 데이터 영역
     double speed;       // 자동차 속도, km/h
     char gear;          // 기어상태(P, R, N, D)
     boolean lights;     // 자동차 조명의 상태
+
+    // 3) 객체 데이터 영역
+    Tire tire;
+    Door door;
+    Handle handle;
 
     // <생성자 영역>
     // 생성자 -> 보통 클래스랑 이름이 같이 지어줘야한다!
@@ -21,6 +30,8 @@ public class Car {
     public Car() {
         // logic
         // 기본생성자 : 사실 생략이 가능하다!
+
+        System.out.println("생성자가 호출되었습니다! 객체가 생성됩니다.");
     }
 
     // <메서드 영역>
